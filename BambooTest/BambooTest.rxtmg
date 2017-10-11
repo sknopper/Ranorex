@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="7.2">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="BambooTest"
+      id="97ac9de1-e113-4b16-9438-ba2a6c5cddea"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="BambooTest"
+      id="97ac9de1-e113-4b16-9438-ba2a6c5cddea"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

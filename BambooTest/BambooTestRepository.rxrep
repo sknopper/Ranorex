@@ -1,0 +1,89 @@
+﻿<repository
+id="d6e705a8-cbfb-4cb8-ae4d-69da5e06637a"
+name="BambooTestRepository"
+rxversion="7.2">
+	<codegen
+	classname="BambooTestRepository"
+	namespace="BambooTest">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="363d79d6-8526-4584-aad5-8ccf4c533ff2"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="5ad3f004-ec78-42ec-b171-3cbb40e30997"
+		isrooted="True"
+		name="NewsORFAt"
+		refpath="/dom[@domain='orf.at']"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			addcaps="unknown,webelement,imgtag"
+			capname="imgtag"
+			id="3135125b-eedb-4310-9166-7167f2442e92"
+			name="Wahl17"
+			refimgid="c91a2dae-975d-4f41-bada-661bc962a90d"
+			refpath="/dom[@domain='orf.at']//body[#'top']/div[2]/header/div[2]/a[@href='http://orf.at/wahl']/img[@title='Wahl 17']"
+			searchtimeout="30000ms">
+				/dom[@domain='orf.at']//body[#'top']//img[@title='Wahl 17']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="af4ce9ea-6f08-4f4f-8b63-4d15e307d506"
+			name="DropdownToggle"
+			refimgid="e19a0d85-204b-4a03-9395-9c28101f84a6"
+			refpath="/dom[@domain='orf.at']//div[#'weather-widget']/span[1]"
+			searchtimeout="30000ms">
+				/dom[@domain='orf.at']//div[#'weather-widget']/span[1]
+			</item>
+			<item
+			addcaps="unknown,webelement,divtag"
+			capname="divtag"
+			id="e1b3d234-1b40-4fad-9f07-42ebe112caa0"
+			name="Steiermark"
+			refimgid="fce1aaaf-e71b-4edb-9fc0-d48de177717e"
+			refpath="/dom[@domain='orf.at']//div[#'dropdown-menu-56673809']/div[@innertext='Steiermark']"
+			searchtimeout="30000ms">
+				/dom[@domain='orf.at']//div[#'dropdown-menu-56673809']/div[@innertext='Steiermark']
+			</item>
+			<item
+			addcaps="unknown,webelement,atag"
+			capname="atag"
+			id="dde731d5-3056-4823-b064-50fca4d06cd1"
+			name="TVthek"
+			refimgid="d30b3f23-31c6-4090-a857-7d85661af759"
+			refpath="/dom[@domain='orf.at']//ul[#'ss-networkNavigation']/li[2]/a[@innertext='TVthek']"
+			searchtimeout="30000ms">
+				/dom[@domain='orf.at']//ul[#'ss-networkNavigation']/?/?/a[@innertext='TVthek']
+			</item>
+			<basepath>
+				/dom[@domain='orf.at']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
+dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
+yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
+9/vEbaWh7TO1xi4qmjspfWKhuLqN++VGtLqn5BTVk1lQRbRVHGn4X8nTNclYtD020smBYDjaHhsJ
+cIxPbY8YIr+9viEGgqGwDBxLvixXfGJaLCLdedUfCwRDyPDKWoiF5SAuT0AMSA+2BXhXZqmydFBu
+bkfbmkFpayPOyQW8CwHs7jUxIN1NOkEa1llLGA7bsYX7KbTd4GiuiUuVbxhyzTMwuiwGpFX5lkLU
+dFjJ+55Mw5yGGpsRtX6Kk2Ue9jWewtBRx9eRJTEg7XnWF+TBo25SzUmo3inINLjIKoPD1QXsbNvN
+6fxr9Az5xIDm9kOm5gLce+xEW/aF1BYlCmshSr2PMxm32HV3B8ez0/jQPycG1NklTMxsUGUaQaMD
+lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
+zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
+8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
+F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>
