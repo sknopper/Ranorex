@@ -91,17 +91,9 @@ namespace BambooTest
             Validate.Attribute(repo.NewsORFAt.Wahl17Info, "Title", "Wahl 17");
             Delay.Milliseconds(100);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'NewsORFAt.DropdownToggle' at 5;12.", repo.NewsORFAt.DropdownToggleInfo, new RecordItemIndex(3));
-            repo.NewsORFAt.DropdownToggle.Click("5;12");
-            Delay.Milliseconds(200);
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'NewsORFAt.Steiermark' at 12;6.", repo.NewsORFAt.SteiermarkInfo, new RecordItemIndex(4));
-            repo.NewsORFAt.Steiermark.Click("12;6");
-            Delay.Milliseconds(200);
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'NewsORFAt.TVthek' at 22;2.", repo.NewsORFAt.TVthekInfo, new RecordItemIndex(5));
-            repo.NewsORFAt.TVthek.Click("22;2");
-            Delay.Milliseconds(200);
+            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'NewsORFAt'.", repo.NewsORFAt.SelfInfo, new RecordItemIndex(3));
+            Host.Current.CloseApplication(repo.NewsORFAt.Self, new Duration(0));
+            Delay.Milliseconds(0);
             
         }
 
