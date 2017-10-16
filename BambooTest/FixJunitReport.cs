@@ -53,6 +53,8 @@ namespace ReportToPDF
 			var reportFileDirectory = TestReport.ReportEnvironment.ReportFileDirectory;
 			var name = TestReport.ReportEnvironment.ReportName;
 			
+			TestReport.EndTestModule();
+			
 			string input = String.Format(@"{0}\{1}.rxlog.junit.xml", reportFileDirectory, name);
 			if (!File.Exists(input))
 			{

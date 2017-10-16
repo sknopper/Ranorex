@@ -24,6 +24,10 @@ rxversion="7.2">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
+			<setup
+			id="4a34f34c-2dd0-4137-b8e8-e632fac5289d"
+			name="setup">
+			</setup>
 			<testcase
 			id="6c72f014-7618-4493-b96b-d2c5444e06d6"
 			name="TestCase">
@@ -50,13 +54,17 @@ rxversion="7.2">
 					<testcase
 					id="6c72f014-7618-4493-b96b-d2c5444e06d6"
 					name="TestCase">
+						<setup
+						id="4a34f34c-2dd0-4137-b8e8-e632fac5289d"
+						name="setup">
+							<testmodule
+							id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
+							name="FixJunitReport">
+							</testmodule>
+						</setup>
 						<testmodule
 						id="c68e5915-828b-43ea-aec2-f76906d08a49"
 						name="Recording1">
-						</testmodule>
-						<testmodule
-						id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
-						name="FixJunitReport">
 						</testmodule>
 					</testcase>
 				</testcase>
