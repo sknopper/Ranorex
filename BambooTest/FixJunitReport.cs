@@ -49,15 +49,40 @@ namespace ReportToPDF
         	if (!registered)
         	{
         		TestSuite.TestSuiteCompleted += delegate {	
-            
+ 
 			
+			TestReport.EndTestModule();
+    		
+    		var reportFileDirectory = TestReport.ReportEnvironment.ReportFileDirectory;
+			var name = TestReport.ReportEnvironment.ReportName;     		
+    		string input = String.Format(@"{0}\{1}.rxlog.junit.xml", reportFileDirectory, name);
+    		
+    		if (!File.Exists(input))
+			{
+				Report.Log(ReportLevel.Error, "Unable to find file: " + input);
+			}
+    		
+    		if (File.ReadAllText(input).Length == 0)
+    		{
+    			Report.Log(ReportLevel.Success, "Test müde, Test schlafen!");
+    			Thread.Sleep(10000);
+    		}
+    		
+    		byte[] text = File.ReadAllBytes(input); //File.ReadAllText(input);
+    		byte[] b = new byte[text.Length -3];
+    		
+    		for (int i = 0; i < b.Length; i++) {
+    			b[i] = text[i + 3];
+    		}
 			
-			Thread t = new Thread(MyRunnable.Start);
-			t.Start();		
+    		Report.Log(ReportLevel.Success, text.Length.ToString());
+			File.WriteAllBytes(input.Replace(".rxlog.junit.xml", ".rxlog.junit_fixed.xml"), b);
+			Report.Log(ReportLevel.Success, "Junit test fixed");		
         		};
         		
         		registered = true;
         	}
+        	
         	
         }
     }
