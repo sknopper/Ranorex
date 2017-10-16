@@ -60,7 +60,7 @@ namespace ReportToPDF
 			}
 			
 			string text = File.ReadAllText(input);
-			Report.Log(ReportLevel.Success, text.Length());
+			Report.Log(ReportLevel.Success, text.Length);
 //			text = text.Replace("<error", "<failure");
 //			text = text.Replace("</error", "</failure");
 			File.WriteAllText(input.Replace(".rxlog.junit.xml", "_fixed.rxlog.junit_1.xml"), text);
