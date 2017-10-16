@@ -62,7 +62,7 @@ namespace ReportToPDF
 			string text = File.ReadAllText(input);
 //			text = text.Replace("<error", "<failure");
 //			text = text.Replace("</error", "</failure");
-			File.WriteAllText(input.Replace(".rxlog.junit.xml", "_fixed.rxlog.junit.xml"), text, Encoding.UTF8);
+			File.WriteAllText(input.Replace(".rxlog.junit.xml", "_fixed.rxlog.junit.xml"), text);
 			Report.Log(ReportLevel.Success, "Junit test fixed");
         		};
         		
