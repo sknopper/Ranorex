@@ -76,6 +76,9 @@
       <RepositoryCode>true</RepositoryCode>
       <id>2cb0fcb4-e3e4-4012-bae9-ee1a6a8652d9</id>
     </Compile>
+    <Compile Include="FixJunitReport.cs">
+      <id>d8b98199-e048-4d9d-acf6-b9a34807eef6</id>
+    </Compile>
     <Compile Include="Program.cs">
       <id>f8a4ef34-0334-4d07-bc1d-1ee30e9bd69e</id>
     </Compile>
