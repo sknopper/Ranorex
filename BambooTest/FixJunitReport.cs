@@ -50,28 +50,42 @@ namespace ReportToPDF
         	{
         		TestSuite.TestSuiteCompleted += delegate {	
             
-			var reportFileDirectory = TestReport.ReportEnvironment.ReportFileDirectory;
-			var name = TestReport.ReportEnvironment.ReportName;
-			
 			TestReport.EndTestModule();
 			
-			string input = String.Format(@"{0}\{1}.rxlog.junit.xml", reportFileDirectory, name);
-			if (!File.Exists(input))
-			{
-				Report.Log(ReportLevel.Error, "Unable to find file: " + input);
-			}
-			
-			string text = File.ReadAllText(input);
-			Report.Log(ReportLevel.Success, text.Length.ToString());
-//			text = text.Replace("<error", "<failure");
-//			text = text.Replace("</error", "</failure");
-			File.WriteAllText(input.Replace(".rxlog.junit.xml", "_fixed.rxlog.junit_1.xml"), text);
-			Report.Log(ReportLevel.Success, "Junit test fixed");
+			Thread t = new Thread(MyRunnable.Start);
+			t.Start();		
         		};
         		
         		registered = true;
         	}
         	
         }
+    }
+    
+    public class MyRunnable
+    {
+    	public static void Start() 
+    	{
+    		var reportFileDirectory = TestReport.ReportEnvironment.ReportFileDirectory;
+			var name = TestReport.ReportEnvironment.ReportName;     		
+    		string input = String.Format(@"{0}\{1}.rxlog.junit.xml", reportFileDirectory, name);
+    		
+    		if (!File.Exists(input))
+			{
+				Report.Log(ReportLevel.Error, "Unable to find file: " + input);
+			}
+    		
+    		if (File.ReadAllText(input).Length == 0)
+    		{
+    			Report.Log(ReportLevel.Success, "Test müde, Test schlafen!");
+    			Thread.Sleep(10000);
+    		}
+    		
+    		string text = File.ReadAllText(input);
+			Report.Log(ReportLevel.Success, text.Length.ToString());
+			File.WriteAllText(input.Replace(".rxlog.junit.xml", "_fixed.rxlog.junit_1.xml"), text);
+			Report.Log(ReportLevel.Success, "Junit test fixed");
+    	}
+    	
     }
 }
