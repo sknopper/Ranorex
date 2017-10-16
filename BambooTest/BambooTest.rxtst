@@ -3,6 +3,12 @@
 rxversion="7.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
+			<testmodule
+			id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
+			name="FixJunitReport"
+			ref="f82f7249-7693-46bd-9bda-0c8db5cfc8de"
+			type="UserCode">
+			</testmodule>
 			<testsuite
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
@@ -47,6 +53,10 @@ rxversion="7.2">
 						<testmodule
 						id="c68e5915-828b-43ea-aec2-f76906d08a49"
 						name="Recording1">
+						</testmodule>
+						<testmodule
+						id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
+						name="FixJunitReport">
 						</testmodule>
 					</testcase>
 				</testcase>
