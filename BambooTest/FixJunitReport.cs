@@ -50,7 +50,7 @@ namespace ReportToPDF
         	{
         		TestSuite.TestSuiteCompleted += delegate {	
             
-			TestReport.EndTestModule();
+			
 			
 			Thread t = new Thread(MyRunnable.Start);
 			t.Start();		
@@ -66,6 +66,8 @@ namespace ReportToPDF
     {
     	public static void Start() 
     	{
+    		TestReport.EndTestModule();
+    		
     		var reportFileDirectory = TestReport.ReportEnvironment.ReportFileDirectory;
 			var name = TestReport.ReportEnvironment.ReportName;     		
     		string input = String.Format(@"{0}\{1}.rxlog.junit.xml", reportFileDirectory, name);
@@ -81,9 +83,15 @@ namespace ReportToPDF
     			Thread.Sleep(10000);
     		}
     		
-    		string text = File.ReadAllText(input);
-			Report.Log(ReportLevel.Success, text.Length.ToString());
-			File.WriteAllText(input.Replace(".rxlog.junit.xml", ".rxlog.junit.xml"), text, new UTF8Encoding(false));
+    		byte[] text = File.ReadAllBytes(input); //File.ReadAllText(input);
+    		byte[] b = new byte[text.Length -3];
+    		
+    		for (int i = 0; i < b.Length; i++) {
+    			b[i] = text[i + 3];
+    		}
+			
+    		Report.Log(ReportLevel.Success, text.Length.ToString());
+			File.WriteAllBytes(input.Replace(".rxlog.junit.xml", ".rxlog.junit_1.xml"), b);
 			Report.Log(ReportLevel.Success, "Junit test fixed");
     	}
     	

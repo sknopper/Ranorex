@@ -3,6 +3,10 @@
 rxversion="7.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
+			<setup
+			id="031c6afa-2486-4f5f-87e2-18d244992b86"
+			name="setup">
+			</setup>
 			<testmodule
 			id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
 			name="FixJunitReport"
@@ -24,10 +28,6 @@ rxversion="7.2">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
-			<setup
-			id="4a34f34c-2dd0-4137-b8e8-e632fac5289d"
-			name="setup">
-			</setup>
 			<testcase
 			id="6c72f014-7618-4493-b96b-d2c5444e06d6"
 			name="TestCase">
@@ -55,7 +55,7 @@ rxversion="7.2">
 					id="6c72f014-7618-4493-b96b-d2c5444e06d6"
 					name="TestCase">
 						<setup
-						id="4a34f34c-2dd0-4137-b8e8-e632fac5289d"
+						id="031c6afa-2486-4f5f-87e2-18d244992b86"
 						name="setup">
 							<testmodule
 							id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
