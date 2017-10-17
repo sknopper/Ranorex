@@ -581,6 +581,59 @@ YKNgo5I9g+sVf5jK/sm09bj81/wo/sm09bj81/wrV2CjYKOSPYPrFX+Yyv7JtPW4/Nf8KP7JtPW4
 rV2Cijkj2D6xV/mP/9k=
 			</helperscreenshot>
 		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7f7c973b-d06d-44cc-8f28-63dcb3a852c3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="4afaf88d-749c-4efc-aace-489ee91afca3"
+			sourcename="RepositoryEditor">
+				<element
+				capabilities="webdocument"
+				dontcache="True"
+				enabled="True"
+				flavor="web"
+				hasfocus="False"
+				index="1"
+				prefcap="webdocument"
+				rect="0,0,0,0"
+				role="container"
+				snapElem=""
+				uidroot="True"
+				valid="False"
+				visible="False">
+					<attribute
+					name="browsername"
+					type="System.String">
+						IE
+					</attribute>
+					<attribute
+					name="browserversion"
+					type="System.String">
+						11.674.15063.0.addon
+					</attribute>
+					<attribute
+					name="state"
+					type="System.String">
+						invalid
+					</attribute>
+				</element>
+				<path>
+					/dom[@domain='www.google.at']
+				</path>
+			</info>
+			<matchname>
+				asdf
+			</matchname>
+			<matchvalue>
+				yourValue
+			</matchvalue>
+		</validationitem>
 		<keysequenceitem
 		KeySequence="hallo{Space}ranorex{Return}"
 		duration="100ms"

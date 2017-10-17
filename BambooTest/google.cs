@@ -87,11 +87,15 @@ namespace BambooTest
             repo.Google.LstIb.Click("22;15");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'hallo{Space}ranorex{Return}' with focus on 'Google.LstIb'.", repo.Google.LstIbInfo, new RecordItemIndex(2));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (asdf='yourValue') on item 'Google'.", repo.Google.SelfInfo, new RecordItemIndex(2));
+            Validate.Attribute(repo.Google.SelfInfo, "asdf", "yourValue");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'hallo{Space}ranorex{Return}' with focus on 'Google.LstIb'.", repo.Google.LstIbInfo, new RecordItemIndex(3));
             repo.Google.LstIb.PressKeys("hallo{Space}ranorex{Return}");
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'Google'.", repo.Google.SelfInfo, new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'Google'.", repo.Google.SelfInfo, new RecordItemIndex(4));
             Host.Current.CloseApplication(repo.Google.Self, new Duration(0));
             Delay.Milliseconds(0);
             
