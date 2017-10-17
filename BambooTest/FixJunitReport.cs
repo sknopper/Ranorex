@@ -62,10 +62,13 @@ namespace ReportToPDF
 				Report.Log(ReportLevel.Error, "Unable to find file: " + input);
 			}
     		
-    		if (File.ReadAllText(input).Length == 0)
+    		int j = 0;
+    		
+    		while (File.ReadAllText(input).Length == 0 && j < 5)
     		{
     			Report.Log(ReportLevel.Success, "Test müde, Test schlafen!");
     			Thread.Sleep(10000);
+    			j++;
     		}
     		
     		byte[] text = File.ReadAllBytes(input); //File.ReadAllText(input);
