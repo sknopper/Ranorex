@@ -64,10 +64,10 @@ namespace ReportToPDF
     		
     		int j = 0;
     		
-    		while (File.ReadAllText(input).Length == 0 && j < 5)
+    		while (File.ReadAllText(input).Length == 0 && j < 10)
     		{
     			Report.Log(ReportLevel.Success, "Test müde, Test schlafen!");
-    			Thread.Sleep(10000);
+    			Thread.Sleep(5000);
     			j++;
     		}
     		
