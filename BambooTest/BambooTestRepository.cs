@@ -28,6 +28,7 @@ namespace BambooTest
     {
         static BambooTestRepository instance = new BambooTestRepository();
         BambooTestRepositoryFolders.NewsORFAtAppFolder _newsorfat;
+        BambooTestRepositoryFolders.GoogleAppFolder _google;
 
         /// <summary>
         /// Gets the singleton class instance representing the BambooTestRepository element repository.
@@ -45,6 +46,7 @@ namespace BambooTest
             : base("BambooTestRepository", "/", null, 0, false, "363d79d6-8526-4584-aad5-8ccf4c533ff2", ".\\RepositoryImages\\BambooTestRepository363d79d6.rximgres")
         {
             _newsorfat = new BambooTestRepositoryFolders.NewsORFAtAppFolder(this);
+            _google = new BambooTestRepositoryFolders.GoogleAppFolder(this);
         }
 
 #region Variables
@@ -70,6 +72,15 @@ namespace BambooTest
         public virtual BambooTestRepositoryFolders.NewsORFAtAppFolder NewsORFAt
         {
             get { return _newsorfat; }
+        }
+
+        /// <summary>
+        /// The Google folder.
+        /// </summary>
+        [RepositoryFolder("4afaf88d-749c-4efc-aace-489ee91afca3")]
+        public virtual BambooTestRepositoryFolders.GoogleAppFolder Google
+        {
+            get { return _google; }
         }
     }
 
@@ -219,6 +230,72 @@ namespace BambooTest
                 get
                 {
                     return _tvthekInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The GoogleAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("4afaf88d-749c-4efc-aace-489ee91afca3")]
+        public partial class GoogleAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _lstibInfo;
+
+            /// <summary>
+            /// Creates a new Google  folder.
+            /// </summary>
+            public GoogleAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Google", "/dom[@domain='www.google.at']", parentFolder, 30000, null, false, "4afaf88d-749c-4efc-aace-489ee91afca3", "")
+            {
+                _lstibInfo = new RepoItemInfo(this, "LstIb", ".//input[#'lst-ib']", 30000, null, "10930299-dcaa-4d72-9b54-f279b3f28275");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("4afaf88d-749c-4efc-aace-489ee91afca3")]
+            public virtual Ranorex.WebDocument Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.WebDocument>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("4afaf88d-749c-4efc-aace-489ee91afca3")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The LstIb item.
+            /// </summary>
+            [RepositoryItem("10930299-dcaa-4d72-9b54-f279b3f28275")]
+            public virtual Ranorex.InputTag LstIb
+            {
+                get
+                {
+                    return _lstibInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The LstIb item info.
+            /// </summary>
+            [RepositoryItemInfo("10930299-dcaa-4d72-9b54-f279b3f28275")]
+            public virtual RepoItemInfo LstIbInfo
+            {
+                get
+                {
+                    return _lstibInfo;
                 }
             }
         }

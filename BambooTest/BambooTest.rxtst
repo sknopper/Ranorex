@@ -3,16 +3,10 @@
 rxversion="7.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
-			<setup
-			id="031c6afa-2486-4f5f-87e2-18d244992b86"
-			name="setup">
-			</setup>
-			<testmodule
-			id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
-			name="FixJunitReport"
-			ref="f82f7249-7693-46bd-9bda-0c8db5cfc8de"
-			type="UserCode">
-			</testmodule>
+			<testcase
+			id="09d35fdb-949c-428b-8113-dcfc77b99852"
+			name="SecondTestCase">
+			</testcase>
 			<testsuite
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
@@ -30,7 +24,7 @@ rxversion="7.2">
 			</testsuite>
 			<testcase
 			id="6c72f014-7618-4493-b96b-d2c5444e06d6"
-			name="TestCase">
+			name="BambooTestCase">
 			</testcase>
 			<testcase
 			id="821bccfa-d0b4-40b7-afb9-62f662b6e9a4"
@@ -43,6 +37,12 @@ rxversion="7.2">
 			ref="c3510294-3278-43a8-938f-f7428a50afaa"
 			type="Recording">
 			</testmodule>
+			<testmodule
+			id="e66b0ce4-1529-40e9-b155-2ded55587a2a"
+			name="google"
+			ref="64aabc9e-117d-435b-9f8a-2dc0760d2675"
+			type="Recording">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -53,18 +53,18 @@ rxversion="7.2">
 				name="BambooTest">
 					<testcase
 					id="6c72f014-7618-4493-b96b-d2c5444e06d6"
-					name="TestCase">
-						<setup
-						id="031c6afa-2486-4f5f-87e2-18d244992b86"
-						name="setup">
-							<testmodule
-							id="08236d0c-37fe-4a1e-b47f-12ac0dac0aec"
-							name="FixJunitReport">
-							</testmodule>
-						</setup>
+					name="BambooTestCase">
 						<testmodule
 						id="c68e5915-828b-43ea-aec2-f76906d08a49"
 						name="Recording1">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="09d35fdb-949c-428b-8113-dcfc77b99852"
+					name="SecondTestCase">
+						<testmodule
+						id="e66b0ce4-1529-40e9-b155-2ded55587a2a"
+						name="google">
 						</testmodule>
 					</testcase>
 				</testcase>
@@ -77,6 +77,9 @@ rxversion="7.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
+			<testcontainer
+			id="09d35fdb-949c-428b-8113-dcfc77b99852">
+			</testcontainer>
 			<testcontainer
 			id="6c72f014-7618-4493-b96b-d2c5444e06d6">
 			</testcontainer>

@@ -79,6 +79,18 @@
     <Compile Include="FixJunitReport.cs">
       <id>d8b98199-e048-4d9d-acf6-b9a34807eef6</id>
     </Compile>
+    <Compile Include="google.cs">
+      <BoundTo>0fbe8193-e1a5-49dd-a9ec-d176f706915e</BoundTo>
+      <DependentUpon>google.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a386415b-4132-447c-8db0-9a3d86177f6d</id>
+    </Compile>
+    <Compile Include="google.UserCode.cs">
+      <BoundTo>0fbe8193-e1a5-49dd-a9ec-d176f706915e</BoundTo>
+      <DependentUpon>google.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>4e4dbf09-49cb-4134-8fb9-5eb78cc2bca5</id>
+    </Compile>
     <Compile Include="Program.cs">
       <id>f8a4ef34-0334-4d07-bc1d-1ee30e9bd69e</id>
     </Compile>
@@ -109,6 +121,11 @@
       <id>5e16665b-337e-49f0-a9a5-3e98d151847b</id>
       <repoid>d6e705a8-cbfb-4cb8-ae4d-69da5e06637a</repoid>
       <reporootid>363d79d6-8526-4584-aad5-8ccf4c533ff2</reporootid>
+    </None>
+    <None Include="google.rxrec">
+      <BoundTo>5e16665b-337e-49f0-a9a5-3e98d151847b</BoundTo>
+      <id>0fbe8193-e1a5-49dd-a9ec-d176f706915e</id>
+      <recordtableid>64aabc9e-117d-435b-9f8a-2dc0760d2675</recordtableid>
     </None>
     <None Include="Recording1.rxrec">
       <BoundTo>5e16665b-337e-49f0-a9a5-3e98d151847b</BoundTo>
