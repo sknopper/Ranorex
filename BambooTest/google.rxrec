@@ -583,7 +583,7 @@ rV2Cijkj2D6xV/mP/9k=
 		</mouseitem>
 		<validationitem
 		action="AttributeEqual"
-		enabled="True"
+		enabled="False"
 		optional="False"
 		searchpropertyid="7f7c973b-d06d-44cc-8f28-63dcb3a852c3">
 			<comment>
@@ -1183,11 +1183,6 @@ iij2FPsHMz//2Q==
 					name="caption"
 					type="System.String">
 						hallo ranorex - Google-Suche
-					</attribute>
-					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:hallo ranorex - Google-Suche - Internet Explorer}
 					</attribute>
 					<attribute
 					name="browsername"
