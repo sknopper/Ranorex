@@ -23,20 +23,10 @@ rxversion="7.2">
 			showinvisiblechars="True">
 			</testsuite>
 			<testcase
-			id="6c72f014-7618-4493-b96b-d2c5444e06d6"
-			name="BambooTestCase">
-			</testcase>
-			<testcase
 			id="821bccfa-d0b4-40b7-afb9-62f662b6e9a4"
 			name="BambooTest"
 			reportlevel="Info;20">
 			</testcase>
-			<testmodule
-			id="c68e5915-828b-43ea-aec2-f76906d08a49"
-			name="Recording1"
-			ref="c3510294-3278-43a8-938f-f7428a50afaa"
-			type="Recording">
-			</testmodule>
 			<testmodule
 			id="e66b0ce4-1529-40e9-b155-2ded55587a2a"
 			name="google"
@@ -51,14 +41,6 @@ rxversion="7.2">
 				<testcase
 				id="821bccfa-d0b4-40b7-afb9-62f662b6e9a4"
 				name="BambooTest">
-					<testcase
-					id="6c72f014-7618-4493-b96b-d2c5444e06d6"
-					name="BambooTestCase">
-						<testmodule
-						id="c68e5915-828b-43ea-aec2-f76906d08a49"
-						name="Recording1">
-						</testmodule>
-					</testcase>
 					<testcase
 					id="09d35fdb-949c-428b-8113-dcfc77b99852"
 					name="SecondTestCase">
@@ -79,9 +61,6 @@ rxversion="7.2">
 		name="TestRun">
 			<testcontainer
 			id="09d35fdb-949c-428b-8113-dcfc77b99852">
-			</testcontainer>
-			<testcontainer
-			id="6c72f014-7618-4493-b96b-d2c5444e06d6">
 			</testcontainer>
 			<testcontainer
 			id="821bccfa-d0b4-40b7-afb9-62f662b6e9a4">
